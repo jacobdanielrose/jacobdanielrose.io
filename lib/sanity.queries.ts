@@ -38,6 +38,9 @@ export const postBySlugQuery = groq`
   ${postFields}
 }
 `
+export const socialsQuery = groq`
+*[_type == "social"]
+`
 
 export interface Author {
   name?: string
@@ -61,4 +64,10 @@ export interface Settings {
   ogImage?: {
     title?: string
   }
+}
+
+export interface Social {
+  _id: string
+  name?: string
+  url?: URL
 }

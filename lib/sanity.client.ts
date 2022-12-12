@@ -9,6 +9,8 @@ import {
   postBySlugQuery,
   postSlugsQuery,
   settingsQuery,
+  Social,
+  socialsQuery,
 } from 'lib/sanity.queries'
 import { createClient } from 'next-sanity'
 
@@ -63,4 +65,11 @@ export async function getPostAndMoreStories(
     return await client.fetch(postAndMoreStoriesQuery, { slug })
   }
   return { post: null, morePosts: [] }
+}
+
+export async function getSocials(): Promise<Social[]> {
+  if (client) {
+    return await client.fetch(socialsQuery)
+  }
+  return []
 }
