@@ -8,7 +8,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className="bg-white text-black">{children}</body>
+      <body className="bg-white text-black dark:bg-dark dark:text-white">{children}</body>
     </html>
   )
 }

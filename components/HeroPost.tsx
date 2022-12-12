@@ -19,11 +19,12 @@ export default function HeroPost(
       <div className="mb-20 md:mb-28 md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8">
         <div>
           <h3 className="mb-4 text-4xl leading-tight lg:text-6xl">
-            <Link href={`/posts/${slug}`} className="hover:underline">
+            <Link href={`/posts/${slug}`} className="hover:border-b-2
+            hover:border-highlight">
               {title || 'Untitled'}
             </Link>
           </h3>
-          <div className="mb-4 text-lg md:mb-0">
+          <div className="mb-4 text-lg md:mb-0 text-accent-1 text-opacity-40">
             <Date dateString={date} />
           </div>
         </div>

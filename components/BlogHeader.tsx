@@ -2,6 +2,7 @@ import { PortableText } from '@portabletext/react'
 import Link from 'next/link'
 
 import styles from './BlogHeader.module.css'
+import TitleTypewriter from './TitleTypewriter'
 
 export default function BlogHeader({
   title,
@@ -17,7 +18,8 @@ export default function BlogHeader({
       return (
         <header className="mt-16 mb-10 flex flex-col items-center md:mb-12 md:flex-row md:justify-between">
           <h1 className="text-6xl font-bold leading-tight tracking-tighter md:pr-8 md:text-8xl">
-            {title}
+            <TitleTypewriter text={title} />
+            {/* {title} */}
           </h1>
           <h4
             className={`mt-5 text-center text-lg md:pl-8 md:text-left ${styles.portableText}`}
@@ -40,8 +42,7 @@ export default function BlogHeader({
 
     default:
       throw new Error(
-        `Invalid level: ${
-          JSON.stringify(level) || typeof level
+        `Invalid level: ${JSON.stringify(level) || typeof level
         }, only 1 or 2 are allowed`
       )
   }
