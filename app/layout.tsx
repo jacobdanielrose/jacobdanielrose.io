@@ -1,5 +1,7 @@
 import 'tailwindcss/tailwind.css'
 
+import { AnalyticsWrapper } from '../components/analytics'
+
 export default function RootLayout({
   children,
 }: {
@@ -8,7 +10,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className="bg-white text-black dark:bg-dark dark:text-white">{children}</body>
+      <body className="bg-white text-black dark:bg-dark dark:text-white
+      scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-highlight/80">
+        {children}
+        <AnalyticsWrapper />
+      </body>
     </html>
   )
 }
