@@ -7,16 +7,17 @@ import PostHeader from 'components/PostHeader'
 import PostTitle from 'components/PostTitle'
 import SectionSeparator from 'components/SectionSeparator'
 import * as demo from 'lib/demo.data'
-import type { Post, Settings } from 'lib/sanity.queries'
+import type { Post, Settings, Social } from 'lib/sanity.queries'
 import { notFound } from 'next/navigation'
 
 export default function PostPage(props: {
   preview?: boolean
   loading?: boolean
   data: { post: Post; morePosts: Post[] }
-  settings: Settings
+  settings: Settings,
+  socials: Social[]
 }) {
-  const { preview, loading, data, settings } = props
+  const { preview, loading, data, settings, socials } = props
   const { post = {} as any, morePosts = [] } = data || {}
   const { title = demo.title } = settings || {}
 
@@ -29,7 +30,7 @@ export default function PostPage(props: {
   return (
     <Layout preview={preview} loading={loading}>
       <Container>
-        <BlogHeader title={title} level={2} />
+        <BlogHeader title={title} level={2} socials={socials} />
         {preview && !post ? (
           <PostTitle>Loading…</PostTitle>
         ) : (

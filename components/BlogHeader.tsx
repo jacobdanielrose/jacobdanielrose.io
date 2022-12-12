@@ -21,42 +21,19 @@ export default function BlogHeader({
     case 1:
       return (
         <header className="mt-12 mb-10 flex flex-col items-center md:mb-12 md:flex-row md:justify-between">
-
-          {/* {socials.map(social => (
-              <SocialIcon
-                key={social._id}
-                url={social.url.toString()}
-                fgColor='gray'
-                bgColor='transparent'
-              />
-            ))} */}
-
           <h1 className="text-6xl font-bold leading-tight tracking-tighter md:pr-8 md:text-8xl">
             <TitleTypewriter text={title} />
-            {/* {title} */}
           </h1>
           <div className='flex flex-col'>
             <div className='flex flex-row mt-6 items-center justify-between mx-auto'>
-              <SocialIcon
-                url={'facebook.com'}
-                fgColor='gray'
-                bgColor='transparent'
-              />
-              <SocialIcon
-                url={'instagram.com'}
-                fgColor='gray'
-                bgColor='transparent'
-              />
-              <SocialIcon
-                url={'linkedin.com'}
-                fgColor='gray'
-                bgColor='transparent'
-              />
-              <SocialIcon
-                url={'github.com'}
-                fgColor='gray'
-                bgColor='transparent'
-              />
+              {socials?.map(social => (
+                <SocialIcon
+                  key={social?._id}
+                  url={social?.url.toString()}
+                  fgColor='gray'
+                  bgColor='transparent'
+                />
+              ))}
             </div>
             <h4
               className={`mt-5 text-center text-lg md:pl-8 md:text-left ${styles.portableText}`}
@@ -76,26 +53,14 @@ export default function BlogHeader({
             </Link>
           </h2>
           <div className='flex flex-row mt-6 items-center'>
-            <SocialIcon
-              url={'facebook.com'}
-              fgColor='gray'
-              bgColor='transparent'
-            />
-            <SocialIcon
-              url={'instagram.com'}
-              fgColor='gray'
-              bgColor='transparent'
-            />
-            <SocialIcon
-              url={'linkedin.com'}
-              fgColor='gray'
-              bgColor='transparent'
-            />
-            <SocialIcon
-              url={'github.com'}
-              fgColor='gray'
-              bgColor='transparent'
-            />
+            {socials?.map(social => (
+              <SocialIcon
+                key={social?._id}
+                url={social?.url.toString()}
+                fgColor='gray'
+                bgColor='transparent'
+              />
+            ))}
           </div>
         </header>
       )

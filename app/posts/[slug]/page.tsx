@@ -5,6 +5,7 @@ import {
   getAllPostsSlugs,
   getPostAndMoreStories,
   getSettings,
+  getSocials
 } from 'lib/sanity.client'
 import { previewData } from 'next/headers'
 
@@ -19,6 +20,7 @@ export default async function SlugRoute({
 }) {
   // Start fetching settings early, so it runs in parallel with the post query
   const settings = getSettings()
+  const socials = getSocials()
 
   if (previewData()) {
     const token = previewData().token || null
@@ -31,6 +33,7 @@ export default async function SlugRoute({
             preview
             data={await data}
             settings={await settings}
+            socials={await socials}
           />
         }
       >
@@ -40,7 +43,7 @@ export default async function SlugRoute({
   }
 
   const data = getPostAndMoreStories(params.slug)
-  return <PostPage data={await data} settings={await settings} />
+  return <PostPage data={await data} settings={await settings} socials={await socials} />
 }
 
 // FIXME: remove the `revalidate` export below once you've followed the instructions in `/pages/api/revalidate.ts`
