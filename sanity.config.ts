@@ -3,6 +3,7 @@
  */
 
 import { visionTool } from '@sanity/vision'
+import { codeInput } from "@sanity/code-input";
 import { apiVersion, dataset, previewSecretId, projectId } from 'lib/sanity.api'
 import { previewDocumentNode } from 'plugins/previewPane'
 import { productionUrl } from 'plugins/productionUrl'
@@ -43,6 +44,7 @@ export default defineConfig({
     }),
     // Add an image asset source for Unsplash
     unsplashImageAsset(),
+    codeInput(),
     // Vision lets you query your content with GROQ in the studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
