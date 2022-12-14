@@ -52,7 +52,7 @@ export default function BlogHeader({
               <TitleTypewriter text={title} />
             </Link>
           </h2>
-          <div className='flex flex-row mt-6 items-center'>
+          <div className='sm:flex flex-row mt-6 items-center hidden'>
             {socials?.map(social => (
               <SocialIcon
                 key={social?._id}
