@@ -8,7 +8,7 @@ import { getProviders } from 'next-auth/react'
 // TODO: add preview and loading sections 
 
 export default async function SignInRoute() {
-    const [settings, socials, providers] = await Promise.all([getSettings(), getSocials(), getProviders()])
+    // const [settings, socials, providers] = await Promise.all([getSettings(), getSocials(), getProviders()])
 
     return (
         <div>hello</div>
