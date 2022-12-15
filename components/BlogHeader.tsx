@@ -1,12 +1,13 @@
 import { PortableText } from '@portabletext/react'
 import { Social } from 'lib/sanity.queries';
 import Link from 'next/link'
-
 import { SocialIcon } from "react-social-icons";
+
 import styles from './BlogHeader.module.css'
+import LogoutButton from './LogoutButton';
 import TitleTypewriter from './TitleTypewriter'
 
-export default function BlogHeader({
+export default async function BlogHeader({
   title,
   description,
   level,
@@ -15,8 +16,11 @@ export default function BlogHeader({
   title: string
   description?: any[]
   level: 1 | 2
-  socials: Social[]
+  socials: Social[],
 }) {
+
+  const session = false;
+
   switch (level) {
     case 1:
       return (
@@ -34,6 +38,9 @@ export default function BlogHeader({
                   bgColor='transparent'
                 />
               ))}
+              <div className={`pr-6 pl-6 ${session ? 'inline' : 'hidden'}`}>
+                <LogoutButton />
+              </div>
             </div>
             <h4
               className={`mt-5 text-center text-lg md:pl-8 md:text-left ${styles.portableText}`}
@@ -61,6 +68,9 @@ export default function BlogHeader({
                 bgColor='transparent'
               />
             ))}
+            <div className={`pr-6 pl-6 ${session ? 'inline' : 'hidden'}`}>
+              <LogoutButton />
+            </div>
           </div>
         </header>
       )

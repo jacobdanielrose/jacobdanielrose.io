@@ -1,8 +1,10 @@
 import 'tailwindcss/tailwind.css'
 
+import Providers from 'components/Providers'
+
 import { AnalyticsWrapper } from '../components/analytics'
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode

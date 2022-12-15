@@ -9,6 +9,7 @@ export default function BlogLayout({
   loading?: boolean
   children: React.ReactNode
 }) {
+
   return (
     <>
       <div className="min-h-screen">

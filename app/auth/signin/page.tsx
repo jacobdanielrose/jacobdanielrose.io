@@ -1,14 +1,15 @@
+
+import { getSettings, getSocials } from 'lib/sanity.client'
 import { getProviders } from 'next-auth/react'
 
-import SignInComponent from './SignInComponent'
+import SignInPage from './SignInPage'
 
-type Props = {}
 
-export default async function SignInPage({ }: Props) {
-    const providers = await getProviders()
-    return (
-        <div>
-            <SignInComponent providers={providers} />
-        </div>
-    )
+// TODO: add preview and loading sections 
+
+export default async function SignInRoute() {
+    const [settings, socials, providers] = await Promise.all([getSettings(), getSocials(), getProviders()])
+
+    return <SignInPage providers={providers} settings={settings} socials={socials} />
+
 }
