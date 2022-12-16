@@ -1,6 +1,6 @@
 import { BookIcon } from '@sanity/icons'
 import { format, parseISO } from 'date-fns'
-import { defineField, defineType } from 'sanity'
+import { defineArrayMember, defineField, defineType } from 'sanity'
 
 import authorType from './author'
 
@@ -43,7 +43,42 @@ export default defineType({
       name: 'content',
       title: 'Content',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [
+        // paragraphs
+        defineArrayMember({
+          type: 'block'
+        }),
+
+        //Custom blocks
+        defineField({
+          type: 'image',
+          name: 'image',
+          title: 'Image',
+          options: {
+            hotspot: true,
+          },
+          preview: {
+            select: {
+              imageUrl: 'asset.url',
+              title: 'caption',
+            },
+          },
+          fields: [
+            defineField({
+              title: 'Caption',
+              name: 'caption',
+              type: 'string',
+            }),
+            defineField({
+              name: 'alt',
+              type: 'string',
+              title: 'Alt text',
+              description:
+                'Alternative text for screenreaders. Falls back on caption if not set',
+            }),
+          ],
+        }),
+      ],
     }),
     defineField({
       name: 'excerpt',
