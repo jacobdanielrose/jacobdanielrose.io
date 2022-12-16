@@ -1,9 +1,9 @@
-import { PortableText } from '@portabletext/react'
 import { Social } from 'lib/sanity.queries';
 import Link from 'next/link'
 import { SocialIcon } from "react-social-icons";
 
 import styles from './BlogHeader.module.css'
+import { CustomPortableText } from './shared/CustomPortableText';
 import TitleTypewriter from './TitleTypewriter'
 
 export default function BlogHeader({
@@ -38,7 +38,7 @@ export default function BlogHeader({
             <h4
               className={`mt-5 text-center text-lg md:pl-8 md:text-left ${styles.portableText}`}
             >
-              <PortableText value={description} />
+              <CustomPortableText value={description} />
             </h4>
           </div>
         </header>
