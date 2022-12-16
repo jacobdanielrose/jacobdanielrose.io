@@ -7,6 +7,8 @@ import {
   type Settings,
   postAndMoreStoriesQuery,
   settingsQuery,
+  Social,
+  socialsQuery,
 } from 'lib/sanity.queries'
 
 export default function PreviewPostPage({
@@ -24,6 +26,7 @@ export default function PreviewPostPage({
     }
   ) || { post: null, morePosts: [] }
   const settings: Settings = usePreview(token, settingsQuery) || {}
+  const socials: Social[] = usePreview(token, socialsQuery) || []
 
-  return <PostPage preview data={data} settings={settings} />
+  return <PostPage preview data={data} settings={settings} socials={socials} />
 }
