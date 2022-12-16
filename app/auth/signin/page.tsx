@@ -2,7 +2,7 @@
 import { getSettings, getSocials } from 'lib/sanity.client'
 import { getProviders } from 'next-auth/react'
 
-// import SignInPage from './SignInPage'
+import SignInPage from './SignInPage'
 
 
 // TODO: add preview and loading sections 
@@ -10,9 +10,7 @@ import { getProviders } from 'next-auth/react'
 export default async function SignInRoute() {
     // const [settings, socials, providers] = await Promise.all([getSettings(), getSocials(), getProviders()])
 
-    return (
-        <div>hello</div>
-    )
+    return <></>
     // return <SignInPage providers={providers} settings={settings} socials={socials} />
 
 }
