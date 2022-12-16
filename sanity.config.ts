@@ -2,6 +2,7 @@
  * This config is used to set up Sanity Studio that's mounted on the `/pages/studio/[[...index]].tsx` route
  */
 
+import { codeInput } from '@sanity/code-input'
 import { visionTool } from '@sanity/vision'
 import { apiVersion, dataset, previewSecretId, projectId } from 'lib/sanity.api'
 import { previewDocumentNode } from 'plugins/previewPane'
@@ -11,6 +12,7 @@ import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
 import author from 'schemas/author'
+import codeblock from 'schemas/objects/codeblock'
 import post from 'schemas/post'
 import settings from 'schemas/settings'
 import social from 'schemas/social'
@@ -26,13 +28,18 @@ export default defineConfig({
   schema: {
     // If you want more content types, you can add them to this array
     types: [
+      // Singletons
+      settings,
+      // Documents
       author,
       post,
-      settings,
-      social
+      social,
+      // Objects
+      codeblock,
     ],
   },
   plugins: [
+    codeInput(),
     deskTool({
       structure: settingsStructure(settings),
       // `defaultDocumentNode` is responsible for adding a “Preview” tab to the document pane

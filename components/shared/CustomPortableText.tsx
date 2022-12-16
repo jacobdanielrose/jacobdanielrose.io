@@ -1,6 +1,7 @@
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import ImageBox from 'components/shared/ImageBox'
 import { Block, Image } from 'sanity'
+import CodeBox from './CodeBox'
 
 export function CustomPortableText({
     paragraphClasses,
@@ -48,6 +49,9 @@ export function CustomPortableText({
                         )}
                     </div>
                 )
+            },
+            code: ({ value }) => {
+                return <CodeBox value={value} />
             },
         },
     }

@@ -78,6 +78,17 @@ export default defineType({
             }),
           ],
         }),
+        defineField({
+          name: 'code',
+          title: 'Code',
+          type: 'code',
+          options: {
+            theme: 'monokai',
+            languageAlternatives: [
+              { title: 'Javascript', value: 'js' },
+            ]
+          }
+        }),
       ],
     }),
     defineField({
