@@ -1,8 +1,8 @@
 import { PortableText } from '@portabletext/react'
 import { Social } from 'lib/sanity.queries';
 import Link from 'next/link'
-
 import { SocialIcon } from "react-social-icons";
+
 import styles from './BlogHeader.module.css'
 import TitleTypewriter from './TitleTypewriter'
 
