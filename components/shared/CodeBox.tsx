@@ -8,8 +8,16 @@ import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 export default function CodeBox({ value }: {
     value: any
 }) {
-    if (value.language === "golang") {
-        value.language = "go"
+
+    // convert language names that don't match
+    // those in react-syntax-highlighter
+    switch (value.language) {
+        case 'golang':
+            value.language = 'go'
+            break
+        case 'sh':
+            value.language = 'bash'
+            break
     }
 
 
