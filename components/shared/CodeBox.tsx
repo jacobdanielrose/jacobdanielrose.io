@@ -11,12 +11,20 @@ export default function CodeBox({ value }: {
     if (value.language === "golang") {
         value.language = "go"
     }
+
+
     return (
-        <SyntaxHighlighter
-            language={value.language}
-            style={atomDark}
-            showLineNumbers={true}>
-            {value.code}
-        </SyntaxHighlighter>
+        //TODO: better the styles and add copy button
+        <div className='bg-[#1d1f21] rounded-t-xl'>
+            <h4 className='text-gray-400 ml-3 pl-3 pt-3'>
+                {value?.filename}
+            </h4>
+            <SyntaxHighlighter
+                language={value.language}
+                style={atomDark}
+                showLineNumbers={true}>
+                {value.code}
+            </SyntaxHighlighter>
+        </div>
     )
 }

@@ -82,6 +82,9 @@ export default defineType({
           name: 'code',
           title: 'Code',
           type: 'code',
+          options: {
+            withFilename: true
+          }
         }),
       ],
     }),

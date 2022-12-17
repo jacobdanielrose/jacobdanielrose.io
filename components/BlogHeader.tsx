@@ -1,10 +1,10 @@
+import { CustomPortableText } from 'components/shared/CustomPortableText';
 import { Social } from 'lib/sanity.queries';
 import Link from 'next/link'
 import { SocialIcon } from "react-social-icons";
 
 import styles from './BlogHeader.module.css'
-import { CustomPortableText } from './shared/CustomPortableText';
-import TitleTypewriter from './TitleTypewriter'
+import TitleTypewriter from './shared/TitleTypewriter';
 
 export default function BlogHeader({
   title,
@@ -47,7 +47,7 @@ export default function BlogHeader({
     case 2:
       return (
         <header className='flex items-start justify-between'>
-          <h2 className="mt-8 mb-20 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
+          <h2 className="mt-8 mb-10 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
             <Link href="/" className="hover:text-highlight">
               <TitleTypewriter text={title} />
             </Link>
