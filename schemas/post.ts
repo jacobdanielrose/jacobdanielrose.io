@@ -82,12 +82,6 @@ export default defineType({
           name: 'code',
           title: 'Code',
           type: 'code',
-          options: {
-            theme: 'monokai',
-            languageAlternatives: [
-              { title: 'Javascript', value: 'js' },
-            ]
-          }
         }),
       ],
     }),
