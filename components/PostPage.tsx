@@ -10,6 +10,8 @@ import * as demo from 'lib/demo.data'
 import type { Post, Settings, Social } from 'lib/sanity.queries'
 import { notFound } from 'next/navigation'
 
+import CommentPage from './comments/CommentPage'
+
 export default function PostPage(props: {
   preview?: boolean
   loading?: boolean
@@ -44,6 +46,7 @@ export default function PostPage(props: {
               />
               <PostBody content={post.content} />
             </article>
+            <CommentPage />
             <SectionSeparator />
             {morePosts?.length > 0 && <MoreStories posts={morePosts} />}
           </>
