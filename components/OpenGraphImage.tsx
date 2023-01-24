@@ -1,4 +1,5 @@
 // Renders the Open Graph image used on the home page
+import { Post } from "lib/sanity.queries"
 
 export const width = 1200
 export const height = 630
@@ -17,13 +18,45 @@ export function OpenGraphImage(props: { title: string }) {
         backgroundColor: '#242424',
       }}
     >
-      <div tw="p-10 flex w-full justify-center items-center">
-        <h2 tw="text-3xl text-white font-bold tracking-tight m-10">
-          Jacob&#39;s Blog
-        </h2>
-        <a href="#" tw="flex items-center justify-center rounded-md border border-transparent bg-[#ff0000]/80 px-5 py-3 text-base font-medium text-white">
-          Get started
-        </a>
+      <div
+        style={{
+          left: 42,
+          top: 42,
+          position: 'absolute',
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+        <span
+          style={{
+            marginRight: 10,
+            fontSize: 50,
+            color: 'white',
+            borderBottom: '1px solid red'
+          }}
+        >
+          {title}
+        </span>
+
+      </div>
+      <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          padding: '20px 50px',
+          margin: '0 42px',
+          fontSize: 40,
+          width: 'auto',
+          maxWidth: 550,
+          textAlign: 'center',
+          color: 'white',
+          lineHeight: 1.4,
+        }}
+      >
+        <h1>
+          Check out my blog!
+        </h1>
       </div>
     </div>
   )
