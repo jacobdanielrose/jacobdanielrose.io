@@ -4,6 +4,7 @@ import Layout from 'components/BlogLayout'
 import HeroPost from 'components/HeroPost'
 import MoreStories from 'components/MoreStories'
 import type { Post, Settings, Social } from 'lib/sanity.queries'
+import TitleTypewriter from './shared/TitleTypewriter'
 
 export default function IndexPage(props: {
   preview?: boolean
@@ -20,7 +21,12 @@ export default function IndexPage(props: {
     <>
       <Layout preview={preview} loading={loading}>
         <Container>
-          <BlogHeader title={title} description={description} level={1} socials={socials} />
+          <header className="mb-5 flex flex-col items-center md:mb-8 md:flex-row md:justify-between">
+            <h1 className="text-3xl md:text-5xl font-bold leading-tight tracking-tighter md:pr-8">
+              <TitleTypewriter text={'Blog'} />
+            </h1>
+          </header>
+
           {heroPost && (
             <HeroPost
               title={heroPost.title}

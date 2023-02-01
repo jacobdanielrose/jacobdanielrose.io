@@ -1,4 +1,5 @@
 import AlertBanner from 'components/AlertBanner'
+import Navbar from './shared/Navbar'
 
 export default function BlogLayout({
   preview,
@@ -13,6 +14,9 @@ export default function BlogLayout({
     <>
       <div className="min-h-screen">
         <AlertBanner preview={preview} loading={loading} />
+        <div className='flex flex-col justify-center px-8'>
+          <Navbar />
+        </div>
         <main>{children}</main>
       </div>
     </>
