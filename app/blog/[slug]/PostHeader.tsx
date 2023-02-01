@@ -1,7 +1,7 @@
-import Avatar from 'components/AuthorAvatar'
-import CoverImage from 'components/CoverImage'
-import Date from 'components/PostDate'
-import PostTitle from 'components/PostTitle'
+import Avatar from 'components/shared/AuthorAvatar'
+import CoverImage from 'components/shared/CoverImage'
+import Date from 'components/shared/PostDate'
+import PostTitle from './PostTitle'
 import type { Post } from 'lib/sanity.queries'
 
 export default function PostHeader(

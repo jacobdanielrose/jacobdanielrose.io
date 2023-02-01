@@ -1,12 +1,10 @@
-import Container from 'components/BlogContainer'
-import BlogHeader from 'components/BlogHeader'
-import Layout from 'components/BlogLayout'
-import MoreStories from 'components/MoreStories'
-import PostBody from 'components/PostBody'
-import PostHeader from 'components/PostHeader'
-import PostTitle from 'components/PostTitle'
-import SectionSeparator from 'components/SectionSeparator'
-import * as demo from 'lib/demo.data'
+import Container from 'components/Container'
+import Layout from 'components/Layout'
+import MoreStories from 'components/shared/MoreStories'
+import PostBody from './PostBody'
+import PostHeader from './PostHeader'
+import PostTitle from './PostTitle'
+import SectionSeparator from 'components/shared/SectionSeparator'
 import type { Post, Settings, Social } from 'lib/sanity.queries'
 import { notFound } from 'next/navigation'
 
@@ -19,7 +17,7 @@ export default function PostPage(props: {
 }) {
   const { preview, loading, data, settings, socials } = props
   const { post = {} as any, morePosts = [] } = data || {}
-  const { title = demo.title } = settings || {}
+  const { title } = settings || {}
 
   const slug = post?.slug
 
@@ -30,7 +28,6 @@ export default function PostPage(props: {
   return (
     <Layout preview={preview} loading={loading}>
       <Container>
-        <BlogHeader title={title} level={2} socials={socials} />
         {preview && !post ? (
           <PostTitle>Loading…</PostTitle>
         ) : (

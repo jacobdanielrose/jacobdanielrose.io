@@ -8,11 +8,11 @@
  *
  */
 import styles from './PostBody.module.css'
-import { CustomPortableText } from './shared/CustomPortableText'
+import { CustomPortableText } from '../../../components/portabletext/CustomPortableText'
 
 export default function PostBody({ content }) {
   return (
-    <div className={`mx-auto max-w-2xl ${styles.portableText}`}>
+    <div className={`mx-auto max-w-3xl ${styles.portableText}`}>
       <CustomPortableText value={content} />
     </div>
   )

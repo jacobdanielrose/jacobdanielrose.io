@@ -1,5 +1,5 @@
-import Container from 'components/BlogContainer'
-import Layout from 'components/BlogLayout'
+import Container from 'components/Container'
+import Layout from 'components/Layout'
 import type { Settings, Social } from 'lib/sanity.queries'
 
 export default function AboutPage(props: {

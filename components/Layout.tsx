@@ -1,4 +1,4 @@
-import AlertBanner from 'components/AlertBanner'
+import AlertBanner from 'components/shared/AlertBanner'
 import Navbar from './shared/Navbar'
 
 export default function BlogLayout({

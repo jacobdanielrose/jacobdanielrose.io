@@ -1,5 +1,5 @@
 import { PortableText, PortableTextComponents } from '@portabletext/react'
-import ImageBox from 'components/shared/ImageBox'
+import ImageBox from 'components/portabletext/ImageBox'
 import { Block, Image } from 'sanity'
 
 import CodeBox from './CodeBox'

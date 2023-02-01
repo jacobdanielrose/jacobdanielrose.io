@@ -1,5 +1,4 @@
-import BlogMeta from 'components/BlogMeta'
-import * as demo from 'lib/demo.data'
+import SiteMeta from 'components/shared/SiteMeta'
 import { getPostBySlug, getSettings } from 'lib/sanity.client'
 import { urlForImage } from 'lib/sanity.image'
 
@@ -8,14 +7,14 @@ export default async function SlugHead({
 }: {
   params: { slug: string }
 }) {
-  const [{ title = demo.title }, post] = await Promise.all([
+  const [{ title }, post] = await Promise.all([
     getSettings(),
     getPostBySlug(params.slug),
   ])
   return (
     <>
       <title>{post.title ? `${post.title} | ${title}` : title}</title>
-      <BlogMeta />
+      <SiteMeta />
       {post.coverImage?.asset?._ref && (
         <meta
           property="og:image"

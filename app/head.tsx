@@ -1,5 +1,5 @@
-import BlogMeta from 'components/BlogMeta'
-import MetaDescription from 'components/MetaDescription'
+import SiteMeta from 'components/shared/SiteMeta'
+import MetaDescription from 'components/shared/MetaDescription'
 import { getSettings } from 'lib/sanity.client'
 
 export default async function PageHead() {
@@ -13,7 +13,7 @@ export default async function PageHead() {
   return (
     <>
       <title>{title}</title>
-      <BlogMeta />
+      <SiteMeta />
       <MetaDescription value={description} />
       <meta
         property="og:image"

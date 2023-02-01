@@ -1,4 +1,4 @@
-import IndexPage from 'components/IndexPage'
+import IndexPage from './IndexPage'
 import PreviewIndexPage from 'components/preview/PreviewIndexPage'
 import { PreviewSuspense } from 'components/preview/PreviewSuspense'
 import { getAllPosts, getSettings, getSocials } from 'lib/sanity.client'

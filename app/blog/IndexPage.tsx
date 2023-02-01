@@ -1,10 +1,9 @@
-import Container from 'components/BlogContainer'
-import BlogHeader from 'components/BlogHeader'
-import Layout from 'components/BlogLayout'
-import HeroPost from 'components/HeroPost'
-import MoreStories from 'components/MoreStories'
+import Container from 'components/Container'
+import Layout from 'components/Layout'
+import MoreStories from 'components/shared/MoreStories'
 import type { Post, Settings, Social } from 'lib/sanity.queries'
-import TitleTypewriter from './shared/TitleTypewriter'
+import TitleTypewriter from '../../components/shared/TitleTypewriter'
+import HeroPost from './HeroPost'
 
 export default function IndexPage(props: {
   preview?: boolean
