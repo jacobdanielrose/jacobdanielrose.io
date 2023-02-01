@@ -12,12 +12,9 @@ export default function PostPage(props: {
   preview?: boolean
   loading?: boolean
   data: { post: Post; morePosts: Post[] }
-  settings: Settings,
-  socials: Social[]
 }) {
-  const { preview, loading, data, settings, socials } = props
+  const { preview, loading, data } = props
   const { post = {} as any, morePosts = [] } = data || {}
-  const { title } = settings || {}
 
   const slug = post?.slug
 

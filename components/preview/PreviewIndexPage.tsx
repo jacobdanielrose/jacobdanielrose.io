@@ -1,6 +1,6 @@
 'use client'
 
-import IndexPage from 'app/blog/IndexPage'
+import BlogPage from 'app/blog/BlogPage'
 import { usePreview } from 'lib/sanity.preview'
 import {
   type Post,
@@ -13,5 +13,5 @@ export default function PreviewIndexPage({ token }: { token: null | string }) {
   const posts: Post[] = usePreview(token, indexQuery) || []
   const settings: Settings = usePreview(token, settingsQuery) || {}
 
-  return <IndexPage preview posts={posts} settings={settings} />
+  return <BlogPage preview posts={posts} settings={settings} />
 }

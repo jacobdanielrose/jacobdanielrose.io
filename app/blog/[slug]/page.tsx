@@ -18,10 +18,6 @@ export default async function SlugRoute({
 }: {
   params: { slug: string }
 }) {
-  // Start fetching settings early, so it runs in parallel with the post query
-  const settings = getSettings()
-  const socials = getSocials()
-
   if (previewData()) {
     const token = previewData().token || null
     const data = getPostAndMoreStories(params.slug, token)
@@ -32,8 +28,6 @@ export default async function SlugRoute({
             loading
             preview
             data={await data}
-            settings={await settings}
-            socials={await socials}
           />
         }
       >
@@ -43,5 +37,5 @@ export default async function SlugRoute({
   }
 
   const data = getPostAndMoreStories(params.slug)
-  return <PostPage data={await data} settings={await settings} socials={await socials} />
+  return <PostPage data={await data} />
 }

@@ -1,4 +1,4 @@
-import IndexPage from './IndexPage'
+import BlogPage from './BlogPage'
 import PreviewIndexPage from 'components/preview/PreviewIndexPage'
 import { PreviewSuspense } from 'components/preview/PreviewSuspense'
 import { getAllPosts, getSettings, getSocials } from 'lib/sanity.client'
@@ -14,7 +14,7 @@ export default async function IndexRoute() {
         return (
             <PreviewSuspense
                 fallback={
-                    <IndexPage loading preview posts={posts} settings={settings} socials={socials} />
+                    <BlogPage loading preview posts={posts} settings={settings} socials={socials} />
                 }
             >
                 <PreviewIndexPage token={token} />
@@ -22,5 +22,5 @@ export default async function IndexRoute() {
         )
     }
 
-    return <IndexPage posts={posts} settings={settings} socials={socials} />
+    return <BlogPage posts={posts} settings={settings} socials={socials} />
 }
