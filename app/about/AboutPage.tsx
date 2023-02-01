@@ -1,9 +1,8 @@
 import Container from 'components/BlogContainer'
-import BlogHeader from 'components/BlogHeader'
 import Layout from 'components/BlogLayout'
 import type { Settings, Social } from 'lib/sanity.queries'
 
-export default function IndexPage(props: {
+export default function AboutPage(props: {
     preview?: boolean
     loading?: boolean
     settings: Settings
@@ -15,7 +14,7 @@ export default function IndexPage(props: {
         <>
             <Layout preview={preview} loading={loading}>
                 <Container>
-                    <h1>THIS IS INDEX</h1>
+                    <h1>THIS IS ABOUT</h1>
                 </Container>
             </Layout>
         </>
