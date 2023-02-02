@@ -1,4 +1,6 @@
 import AlertBanner from 'components/shared/AlertBanner'
+
+import Footer from './shared/Footer'
 import Navbar from './shared/Navbar'
 
 export default function BlogLayout({
@@ -18,6 +20,7 @@ export default function BlogLayout({
           <Navbar />
         </div>
         <main>{children}</main>
+        <Footer />
       </div>
     </>
   )

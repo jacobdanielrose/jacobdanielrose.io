@@ -1,8 +1,9 @@
-import IndexPage from './IndexPage'
-import PreviewIndexPage from './PreviewIndexPage'
 import { PreviewSuspense } from 'components/preview/PreviewSuspense'
 import { getAllPosts, getSettings, getSocials } from 'lib/sanity.client'
 import { previewData } from 'next/headers'
+
+import IndexPage from './IndexPage'
+import PreviewIndexPage from './PreviewIndexPage'
 
 export default async function IndexRoute() {
   // Fetch queries in parallel

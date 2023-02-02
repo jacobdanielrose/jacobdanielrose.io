@@ -1,5 +1,5 @@
-import SiteMeta from 'components/shared/SiteMeta'
 import MetaDescription from 'components/shared/MetaDescription'
+import SiteMeta from 'components/shared/SiteMeta'
 import { getSettings } from 'lib/sanity.client'
 
 export default async function PageHead() {
