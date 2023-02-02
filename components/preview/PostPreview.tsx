@@ -23,7 +23,7 @@ export default function PostPreview({
         />
       </div>
       <h3 className="mb-3 text-3xl leading-snug">
-        <Link href={`/posts/${slug}`} className="hover:border-red-600 hover:border-b-2">
+        <Link href={`/blog/${slug}`} className="hover:border-red-600 hover:border-b-2">
           {title}
         </Link>
       </h3>
