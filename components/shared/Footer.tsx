@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const ExternalLink = ({ href, children }) => (
     <a
-        className="text-gray-500 hover:text-red-600 dark:hover:text-red-800 transition"
+        className="text-gray-500 font-sourcecode hover:text-red-600 dark:hover:text-red-800 transition"
         target="_blank"
         rel="noopener noreferrer"
         href={href}
@@ -19,22 +19,27 @@ export default function Footer() {
                 <div className="flex flex-col space-y-4">
                     <Link
                         href="/"
-                        className="text-gray-500 hover:text-red-600 dark:hover:text-red-800 transition">
+                        className="font-sourcecode text-gray-500 hover:text-red-600 dark:hover:text-red-800 transition">
                         Home
                     </Link>
                     <Link
                         href="/blog"
-                        className="text-gray-500 hover:text-red-600 dark:hover:text-red-800 transition">
+                        className="font-sourcecode text-gray-500 hover:text-red-600 dark:hover:text-red-800 transition">
                         Blog
                     </Link>
+                </div>
+                <div className="flex flex-col space-y-4">
+                    <Link
+                        href="/about"
+                        className="font-sourcecode text-gray-500 hover:text-red-600 dark:hover:text-red-800 transition">
+                        About
+                    </Link>
+                    <ExternalLink href="https://github.com/jacobdanielrose">GitHub</ExternalLink>
                 </div>
                 <div className="flex flex-col space-y-4">
                     <ExternalLink href="https://twitter.com/jacobdanielrose">
                         Twitter
                     </ExternalLink>
-                    <ExternalLink href="https://github.com/jacobdanielrose">GitHub</ExternalLink>
-                </div>
-                <div className="flex flex-col space-y-4">
                     <ExternalLink href="https://reddit.com/u/jacobdanielrose">Reddit</ExternalLink>
 
                 </div>

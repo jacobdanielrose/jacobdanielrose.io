@@ -19,6 +19,18 @@ module.exports = {
         cyan: '#79FFE1',
         'blue-500': '#2276FC',
         'yellow-100': '#fef7da',
+        gray: {
+          0: '#fff',
+          100: '#fafafa',
+          200: '#eaeaea',
+          300: '#999999',
+          400: '#888888',
+          500: '#666666',
+          600: '#444444',
+          700: '#333333',
+          800: '#222222',
+          900: '#111111'
+        }
       },
       spacing: {
         28: '7rem',
@@ -34,6 +46,9 @@ module.exports = {
         '6xl': '2.75rem',
         '7xl': '4.5rem',
         '8xl': '6.25rem',
+      },
+      fontFamily: {
+        sourcecode: ['var(--font-src-code)']
       },
       boxShadow: {
         small: '0 5px 10px rgba(0, 0, 0, 0.12)',
