@@ -1,5 +1,6 @@
 import Container from 'components/Container'
 import Layout from 'components/Layout'
+import NowPlaying from 'components/NowPlaying'
 import type { Settings, Social } from 'lib/sanity.queries'
 
 export default function IndexPage(props: {
@@ -15,6 +16,7 @@ export default function IndexPage(props: {
             <Layout preview={preview} loading={loading}>
                 <Container>
                     <h1>THIS IS INDEX</h1>
+                    <NowPlaying />
                 </Container>
             </Layout>
         </>
