@@ -15,7 +15,6 @@ export default function IndexPage(props: {
         <>
             <Layout preview={preview} loading={loading}>
                 <Container>
-                    <h1>THIS IS INDEX</h1>
                     <NowPlaying />
                 </Container>
             </Layout>
