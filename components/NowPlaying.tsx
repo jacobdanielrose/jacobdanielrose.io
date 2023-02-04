@@ -2,18 +2,10 @@
 'use client'
 
 import fetcher from 'lib/fetcher'
+import { NowPlayingSong } from 'lib/types';
 import useSWR from 'swr'
 
 import TitleTypewriter from './shared/TitleTypewriter';
-
-export type NowPlayingSong = {
-    album: string;
-    albumImageUrl: string;
-    artist: string;
-    isPlaying: boolean;
-    songUrl: string;
-    title: string;
-};
 
 export default function NowPlaying() {
     const { data } = useSWR<NowPlayingSong>('/api/spotify/now-playing', fetcher)

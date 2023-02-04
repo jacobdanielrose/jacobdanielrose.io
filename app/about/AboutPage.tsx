@@ -4,6 +4,8 @@ import TitleTypewriter from 'components/shared/TitleTypewriter'
 import type { Settings, Social } from 'lib/sanity.queries'
 import Image from 'next/image';
 
+import TopTracks from './TopTracks';
+
 
 export default function AboutPage(props: {
     preview?: boolean
@@ -40,6 +42,7 @@ export default function AboutPage(props: {
                             className="rounded filter grayscale mb-8 md:mb-0 mx-auto"
                         />
                     </div>
+                    <TopTracks />
                 </Container>
             </Layout>
         </>
