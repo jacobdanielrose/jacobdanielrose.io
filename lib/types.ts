@@ -12,6 +12,7 @@ export type Song = {
     artist: string;
     title: string;
     ranking: string;
+    albumImageUrl: string;
 };
 
 

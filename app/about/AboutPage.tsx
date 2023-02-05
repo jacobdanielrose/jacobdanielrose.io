@@ -42,6 +42,13 @@ export default function AboutPage(props: {
                             className="rounded filter grayscale mb-8 md:mb-0 mx-auto"
                         />
                     </div>
+                    <h2 className='text-3xl md:text-5xl font-sourcecode tracking-tighter mb-3
+                    border-b-2 w-fit border-red-600 dark:border-red-800'>My top tracks:</h2>
+                    <p className='text-gray-900 dark:text-gray-400 font-sourcecode'>
+                        I love listening to music and also making it myself.
+                        Here you can see my top listened to songs to get an idea
+                        of my music taste. You can click each track to find their corresponding page on Spotify
+                    </p>
                     <TopTracks />
                 </Container>
             </Layout>

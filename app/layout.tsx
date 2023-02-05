@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className={`text-black dark:text-white bg-gray-200 dark:bg-gray-900
+      <body className={`text-black dark:text-white bg-gray-100 dark:bg-gray-900
       ${SourceCodePro.variable} scrollbar-thin scrollbar-thumb-red-600 scrollbar-track-gray-800
       dark:scrollbar-thumb-red-800 dark:scrollbar-track-gray-200`}>
         {children}

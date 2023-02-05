@@ -13,7 +13,7 @@ export default function IndexPage(props: {
   settings: Settings
   socials?: Social[]
 }) {
-  const { preview, loading, posts, settings, socials } = props
+  const { preview, loading, posts, settings } = props
   const [heroPost, ...morePosts] = posts || []
   const { title, description } = settings || {}
 
