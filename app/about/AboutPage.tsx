@@ -43,7 +43,9 @@ export default function AboutPage(props: {
                         />
                     </div>
                     <h2 className='text-3xl md:text-5xl font-sourcecode tracking-tighter mb-3
-                    border-b-2 w-fit border-red-600 dark:border-red-800'>My top tracks:</h2>
+                    border-b-2 w-fit border-red-600 dark:border-red-800'>
+                        My top tracks
+                    </h2>
                     <p className='text-gray-900 dark:text-gray-400 font-sourcecode'>
                         I love listening to music and also making it myself.
                         Here you can see my top listened to songs to get an idea
