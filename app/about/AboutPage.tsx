@@ -48,7 +48,7 @@ export default function AboutPage(props: {
                     </h2>
                     <p className='text-gray-900 dark:text-gray-400 font-sourcecode'>
                         I love listening to music and also making it myself.
-                        Here you can see my top listened to songs to get an idea
+                        Here you can see my top songs to get an idea
                         of my music taste. You can click each track to find their corresponding page on Spotify
                     </p>
                     <TopTracks />
