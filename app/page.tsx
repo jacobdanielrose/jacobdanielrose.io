@@ -7,7 +7,7 @@ import PreviewIndexPage from './PreviewIndexPage'
 
 export default async function IndexRoute() {
   // Fetch queries in parallel
-  const [settings, posts, socials] = await Promise.all([getSettings(), getAllPosts(), getSocials()])
+  const posts = await getAllPosts()
 
   if (previewData()) {
     const token = previewData().token || null
@@ -15,7 +15,7 @@ export default async function IndexRoute() {
     return (
       <PreviewSuspense
         fallback={
-          <IndexPage loading preview settings={settings} socials={socials} />
+          <IndexPage loading preview latestPost={posts[0]} />
         }
       >
         <PreviewIndexPage token={token} />
@@ -23,5 +23,5 @@ export default async function IndexRoute() {
     )
   }
 
-  return <IndexPage settings={settings} socials={socials} />
+  return <IndexPage latestPost={posts[0]} />
 }

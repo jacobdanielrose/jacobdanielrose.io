@@ -1,12 +1,13 @@
 import Container from 'components/Container'
 import Layout from 'components/Layout'
 import MoreStories from 'components/shared/MoreStories'
+import SectionSeparator from 'components/shared/SectionSeparator'
+import type { Post } from 'lib/sanity.queries'
+import { notFound } from 'next/navigation'
+
 import PostBody from './PostBody'
 import PostHeader from './PostHeader'
 import PostTitle from './PostTitle'
-import SectionSeparator from 'components/shared/SectionSeparator'
-import type { Post, Settings, Social } from 'lib/sanity.queries'
-import { notFound } from 'next/navigation'
 
 export default function PostPage(props: {
   preview?: boolean

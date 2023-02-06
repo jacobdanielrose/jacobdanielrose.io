@@ -1,4 +1,5 @@
 import 'tailwindcss/tailwind.css'
+
 import { Source_Code_Pro } from '@next/font/google'
 
 import { AnalyticsWrapper } from '../components/analytics'

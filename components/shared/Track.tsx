@@ -1,8 +1,8 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import { Song } from "lib/types";
 import Image from 'next/image';
-import { motion } from 'framer-motion'
 
 
 export default function Track(track: Song) {
