@@ -7,8 +7,8 @@
  * https://portabletext.org/
  *
  */
-import styles from './PostBody.module.css'
 import { CustomPortableText } from '../../../components/portabletext/CustomPortableText'
+import styles from './PostBody.module.css'
 
 export default function PostBody({ content }) {
   return (

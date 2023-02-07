@@ -4,8 +4,8 @@ import MoreStories from 'components/shared/MoreStories'
 import SectionSeparator from 'components/shared/SectionSeparator'
 import type { Post } from 'lib/sanity.queries'
 import { notFound } from 'next/navigation'
-import ArticleProgress from './ArticleProgress'
 
+import ArticleProgress from './ArticleProgress'
 import PostBody from './PostBody'
 import PostHeader from './PostHeader'
 import PostTitle from './PostTitle'
@@ -38,6 +38,7 @@ export default function PostPage(props: {
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
+                slug={post.slug}
               />
               <PostBody content={post.content} />
             </article>

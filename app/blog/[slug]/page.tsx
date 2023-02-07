@@ -1,4 +1,3 @@
-import PostPage from './PostPage'
 import PreviewPostPage from 'components/preview/PreviewPostPage'
 import { PreviewSuspense } from 'components/preview/PreviewSuspense'
 import {
@@ -8,6 +7,8 @@ import {
   getSocials
 } from 'lib/sanity.client'
 import { previewData } from 'next/headers'
+
+import PostPage from './PostPage'
 
 export async function generateStaticParams() {
   return await getAllPostsSlugs()

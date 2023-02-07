@@ -19,3 +19,7 @@ export type Song = {
 export type TopTracks = {
     tracks: Song[];
 };
+
+export type Views = {
+    total: number;
+};
