@@ -25,6 +25,7 @@ export default function PostHeader(
         </div>
         <div className="flex flex-row mb-6 text-lg font-sourcecode dark:text-gray-500 justify-between">
           <Date dateString={date} />
+          {/* TODO: disable this when in preview mode */}
           <ViewCounter slug={slug} />
         </div>
       </div>

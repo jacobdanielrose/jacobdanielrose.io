@@ -5,7 +5,7 @@ import PostPreview from '../preview/PostPreview'
 export default function MoreStories({ posts }: { posts: Post[] }) {
   return (
     <section>
-      <h2 className="mb-8 text-6xl font-bold font-sourcecode leading-tight tracking-tighter md:text-7xl">
+      <h2 className="mb-8 text-6xl font-sourcecode leading-tight tracking-tighter md:text-7xl">
         More Stories
       </h2>
       <div className="mb-32 grid grid-cols-1 gap-y-20 md:grid-cols-2 md:gap-x-16 md:gap-y-32 lg:gap-x-32">
