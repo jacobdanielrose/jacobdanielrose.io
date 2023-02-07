@@ -22,7 +22,7 @@ export default function AboutPage(props: {
                         </h1>
                     </header>
                     <div className='flex md:justify-between flex-col-reverse md:flex-row mb-5'>
-                        <p className='font-sourcecode sm:mr-5'>
+                        <p className='font-sourcecode sm:mr-5 dark:text-gray-300'>
                             I graduated from the University of Houston with a B.Sc. in Physics in 2018\
                             and have recently completed my Masters Degree in Physics at the University of Erlangen-Nuremberg. My
                             initial field of research was high energy particle physics and I wrote my Bachelors thesis on the topic of Hadronic Matter
@@ -33,7 +33,7 @@ export default function AboutPage(props: {
                             alt="Jacob Rose"
                             width={300}
                             height={550}
-                            src="/static/avatar.jpg"
+                            src="/static/about_avatar.jpg"
                             sizes="100vw"
                             priority
                             className="rounded filter grayscale mb-8 md:mb-0 mx-auto"

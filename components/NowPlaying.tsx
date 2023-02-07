@@ -12,7 +12,7 @@ export default function NowPlaying() {
     const { data } = useSWR<NowPlayingSong>('/api/spotify/now-playing', fetcher)
     return (
         <>
-            <h2 className='text-center md:text-left font-sourcecode md: mb-3 under'>
+            <h2 className='font-sourcecode md: mb-3 under'>
                 <TitleTypewriter cursor={true} text={"What I'm listening to:"} />
             </h2>
             <div className='sm:flex sm:flex-row sm:justify-center'>

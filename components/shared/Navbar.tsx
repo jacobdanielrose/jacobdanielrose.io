@@ -2,16 +2,24 @@
 
 import cn from 'classnames';
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 import { SocialIcon } from 'react-social-icons';
 
 function NavItem({ href, text }) {
+    let pathname = usePathname()
+    if (pathname.includes('/blog/')) {
+        pathname = '/blog'
+    }
+
+    const isActive = pathname === href
 
     return (
         <Link
             href={href}
             className={cn(
-                // ? 'font-semibold text-gray-800 dark:text-gray-200'
-                'font-sourcecode text-gray-600 dark:text-gray-400',
+                isActive
+                    ? 'font-sourcecode text-xl text-gray-900 dark:text-gray-100'
+                    : 'font-sourcecode text-gray-600 dark:text-gray-400',
                 // 'hidden md:inline-block p-1 sm:px-3 sm:py-2 hover:text-red-600 dark:hover:text-red-800 transition-all'
                 'p-1 px-2 sm:px-3 sm:py-2 hover:text-red-600 dark:hover:text-red-800 transition-all'
 
