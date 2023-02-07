@@ -37,7 +37,7 @@ export default function NowPlaying() {
                     <div className="font-sourcecode justify-center ">
                         {data?.songUrl ? (
                             <a
-                                className="capsize text-gray-800 dark:text-gray-200 font-sourcecode  max-w-max truncate"
+                                className="capsize text-gray-800 dark:text-gray-200 font-sourcecode max-w-max"
                                 href={data.songUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -49,7 +49,7 @@ export default function NowPlaying() {
                                 Not Playing
                             </p>
                         )}
-                        <p className="font-sourcecode text-gray-500 dark:text-gray-300 max-w-max truncate">
+                        <p className="font-sourcecode text-gray-500 dark:text-gray-300 max-w-max">
                             <TitleTypewriter text={data?.artist ?? 'Spotify'} />
                         </p>
                     </div>
