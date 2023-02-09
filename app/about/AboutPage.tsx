@@ -3,6 +3,7 @@ import Layout from 'components/Layout'
 import TitleTypewriter from 'components/shared/TitleTypewriter'
 import Image from 'next/image';
 
+import Resume from './Resume';
 import TopTracks from './TopTracks';
 
 
@@ -39,6 +40,7 @@ export default function AboutPage(props: {
                             className="rounded filter grayscale mb-8 md:mb-0 mx-auto"
                         />
                     </div>
+                    <Resume />
                     <h2 className='text-3xl md:text-5xl font-sourcecode tracking-tighter mb-3
                     border-b-2 w-fit border-red-600 dark:border-red-800'>
                         My top tracks
