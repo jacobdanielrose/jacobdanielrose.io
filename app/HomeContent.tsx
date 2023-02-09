@@ -1,8 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import TitleTypewriter from 'components/shared/TitleTypewriter';
 import Image from 'next/image';
-import { Typewriter } from 'react-simple-typewriter'
 
 
 
@@ -10,14 +9,12 @@ export default function HomeContent() {
     return (
         <div className='flex flex-col md:flex-row md:justify-between mb-5 pr-5'>
             <div className='flex flex-col mb-5 pr-5'>
-                <motion.h2
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ ease: "easeIn", duration: 1.2 }}
-                    className='font-sourcecode text-3xl md:text-5xl leading-tight tracking-tighter md:pr-8'>
-                    Jacob Rose
-                </motion.h2>
-                <h3 className='font-sourcecode text-gray-500 text-xl leading-tight tracking-tighter mb-5'>IT Technical Specialist at IBM</h3>
+                <h2 className='font-sourcecode text-3xl md:text-5xl leading-tight tracking-tighter md:pr-8'>
+                    <TitleTypewriter cursor={true} text={'Jacob Rose'} />
+                </h2>
+                <h3 className='font-sourcecode text-gray-500 text-xl leading-tight tracking-tighter mb-5'>
+                    <TitleTypewriter text={'IT Technical Specialist at IBM'} />
+                </h3>
                 {/* <p
                     className='font-sourcecode text-gray-900 dark:text-gray-300'>
                     I like
