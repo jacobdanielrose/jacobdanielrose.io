@@ -22,7 +22,7 @@ export default function IndexPage(props: {
       <Layout preview={preview} loading={loading}>
         <Container>
           <header className="mb-5 flex flex-col items-center md:mb-8 md:flex-row md:justify-between">
-            <h1 className="text-5xl md:text-7xl font-sourcecode leading-tight tracking-tighter md:pr-8 mb-2 md:mb-5">
+            <h1 className="text-5xl md:text-7xl font-sourcecode leading-tight tracking-tighter md:pr-8 mb-2 md:mb-5 text-left">
               <TitleTypewriter cursor={true} text={'Blog'} />
             </h1>
           </header>
@@ -32,7 +32,6 @@ export default function IndexPage(props: {
               title={heroPost.title}
               coverImage={heroPost.coverImage}
               date={heroPost.date}
-              author={heroPost.author}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
             />

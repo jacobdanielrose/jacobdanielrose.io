@@ -9,7 +9,6 @@ export default function PostPreview({
   coverImage,
   date,
   excerpt,
-  author,
   slug,
 }: Omit<Post, '_id'>) {
   return (
@@ -31,7 +30,6 @@ export default function PostPreview({
         <Date dateString={date} />
       </div>
       {excerpt && <p className="mb-4 text-lg leading-relaxed font-sourcecode tracking-tight text-gray-700 dark:text-gray-200">{excerpt}</p>}
-      {author && <Avatar name={author.name} picture={author.picture} />}
     </div>
   )
 }
