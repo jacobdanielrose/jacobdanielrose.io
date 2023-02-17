@@ -1,6 +1,6 @@
 'use client'
 
-import PostPage from 'components/PostPage'
+import PostPage from 'app/blog/[slug]/PostPage'
 import { usePreview } from 'lib/sanity.preview'
 import {
   type Post,
@@ -25,8 +25,6 @@ export default function PreviewPostPage({
       slug,
     }
   ) || { post: null, morePosts: [] }
-  const settings: Settings = usePreview(token, settingsQuery) || {}
-  const socials: Social[] = usePreview(token, socialsQuery) || []
 
-  return <PostPage preview data={data} settings={settings} socials={socials} />
+  return <PostPage preview data={data} />
 }
