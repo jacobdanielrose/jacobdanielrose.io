@@ -24,8 +24,8 @@ export default function AboutPage(props: {
                     </header>
                     <div className='flex md:justify-between flex-col-reverse md:flex-row mb-5'>
                         <p className='font-sourcecode sm:mr-5 dark:text-gray-300'>
-                            I graduated from the University of Houston with a B.Sc. in Physics in 2018\
-                            and have recently completed my Masters Degree in Physics at the University of Erlangen-Nuremberg. My
+                            I graduated from the University of Houston with a B.Sc. in Physics in 2018
+                            and completed my Masters Degree in Physics at the University of Erlangen-Nuremberg in 2022. My
                             initial field of research was high energy particle physics and I wrote my Bachelors thesis on the topic of Hadronic Matter
                             and Quark-Gluon Plasma. My focus switched over the course of my Masters and my Masters thesis involved
                             simulating X-ray reflection from black holes. I now work as an IT Technical Specialist at IBM.
